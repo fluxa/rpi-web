@@ -25,3 +25,9 @@ app.get('/', function(req, res) {
   //res.render('index', robj);
   res.send('I\m running from a raspberry-pi. Hello there!');
 });
+
+//Port
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
